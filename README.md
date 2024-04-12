@@ -9,7 +9,7 @@ A (semi) detailed overview of the JavaScript language and how it works under the
 - [Block Scope](#block-scope)
 - [Shadowing](#shadowing)
 - [Closures](#closures)
-- [Author](#author)
+- [Creator](#creator)
 
 ## The JS Engine, Execution Context and The Call Stack
 
@@ -156,8 +156,10 @@ A (semi) detailed overview of the JavaScript language and how it works under the
   - Iterators
   - etc.
 
-## Author
+## Creator
 
 ### Ali Ghelichkhani
 
 - https://github.com/I-Do-CS
+
+DISCLAIMER: Some of the material above, which I'm too lazy to refrence, have been gathered from the web and I am not the original writer.
