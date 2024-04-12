@@ -9,6 +9,7 @@ A (semi) detailed overview of the JavaScript language and how it works under the
 - [Block Scope](#block-scope)
 - [Shadowing](#shadowing)
 - [Closures](#closures)
+- [Interview Questions](#interview-questions)
 - [Creator](#creator)
 
 ## The JS Engine, Execution Context and The Call Stack
@@ -155,6 +156,24 @@ A (semi) detailed overview of the JavaScript language and how it works under the
   - Async State Management
   - Iterators
   - etc.
+
+## Interview Questions
+
+- What is a closure?
+- Is ()() valid JS syntax? If yes, what does it do?
+- Are let declarations closed over?
+- Are function parameters closed over?
+- Do grandchild scopes enclose outer scope chains as well?
+- What is shadowing? Explain.
+- Name some advantages of closures.
+- What is data hiding and encapsulation?
+- What is a function Constructor in JS?
+- Disadvantages of closures?
+  - Hgih memory consumption
+  - Doesn't undergo garbage collection if not handled properly
+  - Can possibly lead to memory leaks
+- What is garbage collection?
+- Give an overview of JS Engines' auto garbage collection?
 
 ## Creator
 
