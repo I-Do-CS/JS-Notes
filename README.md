@@ -9,6 +9,7 @@ A (semi) detailed overview of the JavaScript language and how it works under the
 - [Block Scope](#block-scope)
 - [Shadowing](#shadowing)
 - [Closures](#closures)
+- [Functions in Depth](#functions-in-depth)
 - [Interview Questions](#interview-questions)
 - [Creator](#creator)
 
@@ -156,6 +157,96 @@ A (semi) detailed overview of the JavaScript language and how it works under the
   - Async State Management
   - Iterators
   - etc.
+
+## Functions in Depth
+
+### Function Declarations/Statements
+
+- A function that is declared via the "function" keyword
+  - Function Statements are hoisted
+
+```javascript
+statement(); // Function Call
+
+function statement() {
+  console.log("I come from a function statement");
+}
+```
+
+### Function Expressions
+
+- A function which is treated like a value
+  - Are not hoisted
+  - Are invoked by calling the variable they're stored in
+
+```javascript
+const expression = function () {
+  console.log("I come fron a function expression");
+};
+
+expression(); // Function Call
+```
+
+### Anonymous Functions
+
+- A function without an identifier
+- Can be stored in variables for later use aka. function expression
+  - or called immediately
+
+```javascript
+const anon = function () {
+  console.log(
+    "I come from an anonymous function that's stored in a variable"
+  );
+};
+anon() /* Function Call */;
+
+(function () {
+  console.log("I come from an immediately invoked anonymous function!");
+})(); // Called immediately upon declaration
+```
+
+### Named Function Expressions
+
+- A function expression which is not anonymous and has an identifier
+  - aka. Function Expression X Function Declaration/Statement
+
+```javascript
+funcDeclaration(); /* Invalid. Throws Error. */
+// Because "funcDeclaration" belongs to the scope of "funcExpression" and can't be accessed from outside.
+
+const funcExpression = function funcDeclaration() {
+  console.log(
+    "I come from a named function declaration which is stored in a variable"
+  );
+};
+
+funcExpression(); // Function Call
+```
+
+### Parameters vs Arguments
+
+- Parameters: Local variables of a function which can be passed to it from other scopes
+- Arguements: Variables that are passed from scope to scope as function parameters
+
+```javascript
+function func(param = "I am a parameter local to my function scope") {
+  console.log(param);
+}
+const arg = "I can be passed to a function as an arguement";
+
+func(arg); // "I can be passed to a function as an arguement"
+func(); //    "I am a parameter local to my function scope"
+```
+
+### First Class Functions (Functions Are First Class Citizens)
+
+- Note that, in JS, even functions can be passed to, and returned from other functions.
+
+  - Meaning, functions are treated like any other value.
+
+- Programming languages in which functions behave like this, are said to have "First-class functions".
+- In other words, First-class functions are functions that are trated like normal variables and can act as such.
 
 ## Interview Questions
 
